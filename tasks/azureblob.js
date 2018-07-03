@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-  var azure = require('azure'),
+  var azure = require('azure-storage'),
     Q = require('q'),
     util = require('util'),
     path = require('path'),
