@@ -172,8 +172,8 @@ module.exports = function(grunt) {
         fnCopyToBlob;
 
       // configure proper azure metadata for specific file
-      meta.contentType = mime.lookup(source);
-      meta.contentTypeHeader = mime.lookup(source);
+      meta.contentType = mime.getType(source);
+      meta.contentTypeHeader = mime.getType(source);
       meta.contentEncoding = gzip ? 'gzip' : null;
 
       logMessage = util.format('\tCopy %s => %s/%s - %s ', srcFile, options.containerName, destination, meta.contentType);
